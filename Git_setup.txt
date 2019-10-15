@@ -1,0 +1,21 @@
+#HOW TO GENERATE AND INSTALL THE SSH KEY ON GITHUB
+
+#1 GENERATE THE SSH KEY
+
+ssh-keygen -t rsa -b 4096 -C "user@mail.com"
+
+#2 PRESS ENTER TWICE
+
+#3 COPY TO CLIPBOARD
+xclip -sel clip < ~/.ssh/id_rsa.pub
+
+#In the upper-right corner of any page, click your profile photo, then click Settings.
+
+#In the user settings sidebar, click SSH and GPG keys.
+
+#Click New SSH key or Add SSH key.
+
+#-----------CLONING THE GIT PROJECT
+
+git clone https://github.com/pablovglez/S5_2019.git
+
