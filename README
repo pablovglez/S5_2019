@@ -1,1 +1,14 @@
-FIRST FILE
+#Get started by downloading the TI BLE Stack and start with Project 0.
+
+#----BLE STACK
+
+#-----MISSING???
+
+#Download SimpleLink CC2640R2 Software Development Kit
+
+http://www.ti.com/tool/download/SIMPLELINK-CC2640R2-SDK
+
+#To debug MP
+  1 - connect usb
+  2 - Press reset button
+  3 - Click debug button
