@@ -1,0 +1,128 @@
+[
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00",
+    "removeofflineLink": "api/resources?id=yHr2rNIaS0EhBI&path=Software/SimpleLink CC2640R2 SDK/SimpleLink Academy/Proprietary RF&removeoffline=true",
+    "_id": "yHr2rNIaS0EhBI",
+    "description": "Use the EasyLink serial AT command API to control the proprietary radio to send and receive data",
+    "devtools": [
+      "CC2640R2 LaunchPad"
+    ],
+    "fileType": ".html",
+    "icon": "simplelink_academy_cc2640r2sdk_3_30_01_00/.metadata/favicon.png",
+    "link": "api/linkTo/yHr2rNIaS0EhBI?extname=.html",
+    "linkType": "local",
+    "name": "EasyLink Network Processor example",
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00",
+    "resourceType": "file",
+    "shortDescription": "Use the EasyLink serial AT command API to control the proprietary radio to send and receive data",
+    "type": "resource",
+    "text": "EasyLink Network Processor example",
+    "url": "/api/resources?devtool=CC2640R2%20LaunchPad&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.0.1::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.1::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20CC2640R2%20SDK/SimpleLink%20Academy/Proprietary%20RF",
+    "packageOrder": 161,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00",
+    "removeofflineLink": "api/resources?id=yHrvHdLBqob2qs&path=Software/SimpleLink CC2640R2 SDK/SimpleLink Academy/Proprietary RF&removeoffline=true",
+    "_id": "yHrvHdLBqob2qs",
+    "description": "Code Composer Studio, SmartRF Studio training. Import, modify, build and run RF examples for the CC13x0, CC13x2 and CC2640R2 devices through a series of tasks",
+    "devtools": [
+      "CC2640R2 LaunchPad"
+    ],
+    "fileType": ".html",
+    "icon": "simplelink_academy_cc2640r2sdk_3_30_01_00/.metadata/favicon.png",
+    "link": "api/linkTo/yHrvHdLBqob2qs?extname=.html",
+    "linkType": "local",
+    "name": "Basic RX and TX",
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00",
+    "resourceType": "file",
+    "shortDescription": "Code Composer Studio, SmartRF Studio training. Import, modify, build and run RF examples for the CC13x0, CC13x2 and CC2640R2 devices through a series of tasks",
+    "type": "resource",
+    "text": "Basic RX and TX",
+    "url": "/api/resources?devtool=CC2640R2%20LaunchPad&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.0.1::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.1::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20CC2640R2%20SDK/SimpleLink%20Academy/Proprietary%20RF",
+    "packageOrder": 161,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00",
+    "removeofflineLink": "api/resources?id=yHrGMzCze5XdsU&path=Software/SimpleLink CC2640R2 SDK/SimpleLink Academy/Proprietary RF&removeoffline=true",
+    "_id": "yHrGMzCze5XdsU",
+    "description": "Set up a Concentrator and one (or more) Node(s) in a Wireless Sensor Network using the WSN example included in TI-RTOS",
+    "devtools": [
+      "CC2640R2 LaunchPad"
+    ],
+    "fileType": ".html",
+    "icon": "simplelink_academy_cc2640r2sdk_3_30_01_00/.metadata/favicon.png",
+    "link": "api/linkTo/yHrGMzCze5XdsU?extname=.html",
+    "linkType": "local",
+    "name": "Wireless Sensor Network example",
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00",
+    "resourceType": "file",
+    "shortDescription": "Set up a Concentrator and one (or more) Node(s) in a Wireless Sensor Network using the WSN example included in TI-RTOS",
+    "type": "resource",
+    "text": "Wireless Sensor Network example",
+    "url": "/api/resources?devtool=CC2640R2%20LaunchPad&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.0.1::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.1::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20CC2640R2%20SDK/SimpleLink%20Academy/Proprietary%20RF",
+    "packageOrder": 161,
+    "offline": "true"
+  },
+  {
+    "_id": "yHrAsfzo0YJxOw",
+    "description": "Code Composer Studio makes it easy to utilize the TI-RTOS drivers for the SimpleLink CC13xx device. Using TI-RTOS and CCS, it is easy to get started with examples that showcase the capabilities of the CC1310",
+    "devtools": [
+      "CC2640R2 LaunchPad"
+    ],
+    "icon": "simplelink_academy_cc2640r2sdk_3_30_01_00/.metadata/icon_s_video_a.png",
+    "link": "api/linkTo/yHrAsfzo0YJxOw?extname=",
+    "linkType": "external",
+    "name": "How to get started with CC1310 Packet RX_TX example",
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00",
+    "resourceType": "web.page",
+    "shortDescription": "Code Composer Studio makes it easy to utilize the TI-RTOS drivers for the SimpleLink CC13xx device. Using TI-RTOS and CCS, it is easy to get started with examples that showcase the capabilities of the CC1310",
+    "tags": [],
+    "type": "weblink",
+    "text": "How to get started with CC1310 Packet RX_TX example",
+    "url": "/api/resources?devtool=CC2640R2%20LaunchPad&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.0.1::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.1::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20CC2640R2%20SDK/SimpleLink%20Academy/Proprietary%20RF",
+    "packageOrder": 161
+  },
+  {
+    "_id": "yHrmj2r6DVaF_I",
+    "description": "The Wireless Sensor Network Concentrator and Node examples showcases how to use Sub-1GHz Wireless MCU technology with sensor-based applications",
+    "devtools": [
+      "CC2640R2 LaunchPad"
+    ],
+    "icon": "simplelink_academy_cc2640r2sdk_3_30_01_00/.metadata/icon_s_video_a.png",
+    "link": "api/linkTo/yHrmj2r6DVaF_I?extname=",
+    "linkType": "external",
+    "name": "CC13xx Wireless Sensor Network Node and Concentrator example",
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00",
+    "resourceType": "web.page",
+    "shortDescription": "The Wireless Sensor Network Concentrator and Node examples showcases how to use Sub-1GHz Wireless MCU technology with sensor-based applications",
+    "tags": [],
+    "type": "weblink",
+    "text": "CC13xx Wireless Sensor Network Node and Concentrator example",
+    "url": "/api/resources?devtool=CC2640R2%20LaunchPad&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.0.1::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.1::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20CC2640R2%20SDK/SimpleLink%20Academy/Proprietary%20RF",
+    "packageOrder": 161
+  },
+  {
+    "_id": "yHraq434BtD0gw",
+    "description": "In this video, we describe the advantages of using Sub-1GHz wireless communication, and why Sub-1GHz communication can increase range, reduce power consumption, and increase reliability",
+    "devtools": [
+      "CC2640R2 LaunchPad"
+    ],
+    "icon": "simplelink_academy_cc2640r2sdk_3_30_01_00/.metadata/icon_s_video_a.png",
+    "link": "api/linkTo/yHraq434BtD0gw?extname=",
+    "linkType": "external",
+    "name": "Why Sub1-GHz",
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC2640R2SDK__3.30.01.00",
+    "resourceType": "web.page",
+    "shortDescription": "In this video, we describe the advantages of using Sub-1GHz wireless communication, and why Sub-1GHz communication can increase range, reduce power consumption, and increase reliability",
+    "tags": [],
+    "type": "weblink",
+    "text": "Why Sub1-GHz",
+    "url": "/api/resources?devtool=CC2640R2%20LaunchPad&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.0.1::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.1::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20CC2640R2%20SDK/SimpleLink%20Academy/Proprietary%20RF",
+    "packageOrder": 161
+  }
+]
