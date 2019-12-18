@@ -28,6 +28,7 @@ virtualenv -p python3 .venv
 chmod +x rtls_agent_cli
 
 #Make sure all pre-requisites are fulfilled by typing: 
+#Tkinker must be included on the list
 pip3 install -r requirements.txt 
 
 #If error with windows-curses [windows-curses is not necessary on Python 3.7] comment such line
@@ -59,3 +60,4 @@ python3 agent/rtls_agent_cli.py
 
 cd /home/efisio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples
 
+python3 tst_efisio.py

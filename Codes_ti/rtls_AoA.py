@@ -86,6 +86,7 @@ try:
                     fichier.write('\n')
                     fichier.close
             except:
+                print ('\nProblem writing on JSON file')
                 break
                     
         except queue.Empty:
