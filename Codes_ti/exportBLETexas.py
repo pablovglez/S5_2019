@@ -134,7 +134,7 @@ def graph3(mes):
     fig = plt.figure(figsize=(20,10))
     ax = plt.subplot(111)
     angle_table=pd.DataFrame({'position' : mes.position,'distance' : mes.distance,'angle' : mes.angle})
-        
+            
     #PLOT POSITION VS READ ANGLE 
        
     ax.boxplot(angle_table.loc[angle_table['distance']==1]['angle'], positions=[1], showfliers=True)
