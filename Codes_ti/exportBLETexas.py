@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 plt.rcParams['font.size'] = 20
 
 class AOAData():
-    position=[]
-    distance=[]
-    time=[]
-    angle=[]
+    position=[] #Actual angle where the slave is placed (which mark on the ground)
+    distance=[] #Distance from the passive to slave
+    time=[] 
+    angle=[] #Measured angle (by the passive)
     rssi=[]
     antenna=[]
     channel=[]
@@ -22,9 +22,9 @@ def readData():
     mes2= AOAData()
     try:
         #with open('/home/efisio/Documents/3Sem/S5_2019/Data/data.json') as f:
-        with open('/home/efisio/Documents/3Sem/S5_2019/Data/dataBLE.json') as f:
-            mes.distance=[]
-            mes1.distance=[]
+        with open('/home/efisio/Documents/3Sem/S5_2019/Codes_ti/TestData.json') as f:
+            mes.distance=[]  
+            mes1.distance=[]  
             mes1.position=[]
             mes1.angle=[]
             mes2.distance=[]
@@ -57,7 +57,7 @@ def readData():
                 mes.channel.append(dict.get('channel', 0))
                 #myList.append(mes.__dict__)
                 
-            for i, line in enumerate(mes.distance):
+            '''for i, line in enumerate(mes.distance):
                 if line < 6:
                                         
                     mes1.position.append(mes.position[i])
@@ -78,7 +78,9 @@ def readData():
                     mes2.antenna.append(mes.antenna[i-1])
                     mes2.channel.append(mes.channel[i-1])
                     #pass
-            return mes1,mes2
+            return mes1,mes2'''
+            print(mes[0])    
+            return mes
                 
     except (Exception, psycopg2.Error) as error :
             logging.debug('Error while reading file or inserting to PostgreSQL:'.format(error))
@@ -157,10 +159,12 @@ def graph3(mes):
     fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_distance.png')
 
 def main():
-    myList1,myList2=readData()
+    #myList1,myList2=readData()
+    myList=readData()
+    print(myList)
     #graph1(myList1)
     #graph2(myList1)
-    graph3(myList2)
+    #graph3(myList2)
     #print(myList1.angle)
     print('Done')
     

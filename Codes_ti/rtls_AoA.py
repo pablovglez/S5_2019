@@ -6,6 +6,7 @@ Created on Sat Nov 16 17:47:15 2019
 @author: efisio
 """
 
+import argparse
 import queue
 import json
 import time
@@ -17,11 +18,19 @@ address = None
 address_type = None
 timestamp = 0
 
+parser = argparse.ArgumentParser(description='Returns the distance between the passive and the slave. ' +
+    'Returns the position of the slave relative to the passive. ' +
+    'Example:    test.py \'distance\' and \'position\' \''+
+    'These samples were taken using Python\'')
+parser.add_argument("distance", help="Displays distance")
+parser.add_argument("position", help="Displays time")
+args = parser.parse_args()
+
 #First, construct an instance of the RTLSNode class for the master and passive
 #device connected to PC. The first parameter is the user/UART COM port, and 
 #the second is the baudrate which defaults to 115200
 
-my_nodes = [RTLSNode('/dev/ttyACM2', 115200), RTLSNode('/dev/ttyACM0', 115200)]
+my_nodes = [RTLSNode('/dev/ttyACM4', 115200), RTLSNode('/dev/ttyACM2', 115200)]
 
 #Instantiate the RTLSManager will the newly created nodes, 
 #but do not connect a rtls_agent_cli.
@@ -80,6 +89,8 @@ try:
                 with open("/home/efisio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples/data.json","a") as fichier:
                     message=json.loads("["+msg.as_json()+"]")
                     message[0]["payload"]["time"]=timestamp
+                    message[0]["payload"]["distance"]=args.distance
+                    message[0]["payload"]["position"]=args.position
                     #message[0]["payload"]["address"]=address #AT THIS TIME IS NOT KNOWN NOR NECESSARY
                     json.dump(message[0]["payload"], fichier)
                     print(message[0]["payload"])
