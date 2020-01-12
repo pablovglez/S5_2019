@@ -23,13 +23,13 @@ def readData():
     try:
         #with open('/home/efisio/Documents/3Sem/S5_2019/Data/data.json') as f:
         with open('/home/efisio/Documents/3Sem/S5_2019/Codes_ti/TestData.json') as f:
-            mes.distance=[]  
+            """mes.distance=[]  
             mes1.distance=[]  
             mes1.position=[]
             mes1.angle=[]
             mes2.distance=[]
             mes2.position=[]
-            mes2.angle=[]
+            mes2.angle=[]"""
             for entry in f:                
                 dict = json.loads(entry)
                 #if dict['class']=='SKY':
@@ -79,7 +79,8 @@ def readData():
                     mes2.channel.append(mes.channel[i-1])
                     #pass
             return mes1,mes2'''
-            print(mes[0])    
+            print(mes.position)    
+            print(mes.__dict__)  
             return mes
                 
     except (Exception, psycopg2.Error) as error :
@@ -117,19 +118,20 @@ def graph2(mes):
         
     #PLOT ANGLE VS READ DISTANCE 
        
-    ax.boxplot(angle_table.loc[angle_table['position']==0]['angle'], positions=[1], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']==30]['angle'], positions=[2], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']==60]['angle'], positions=[3], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']==90]['angle'], positions=[4], showfliers=True)
-    plt.xticks([1, 2,3,4], ['0 degrés','30 degrés','60 degrés','90 degrés'])
+    ax.boxplot(angle_table.loc[angle_table['position']=='0']['angle'], positions=[1], showfliers=True)
+    ax.boxplot(angle_table.loc[angle_table['position']=='15']['angle'], positions=[2], showfliers=True)
+    ax.boxplot(angle_table.loc[angle_table['position']=='30']['angle'], positions=[3], showfliers=True)
+    ax.boxplot(angle_table.loc[angle_table['position']=='45']['angle'], positions=[4], showfliers=True)
+    plt.xticks([1, 2,3,4], ['0','15','30','45'])
     
     plt.grid(True, linestyle='-', linewidth=2)
     plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
-    plt.xlabel('Position réelle',fontsize=25)
+    plt.xlabel('Position réelle (en degrés)',fontsize=25)
     plt.ylabel('Position mesurée',fontsize=25)
     
     fig.tight_layout()
-    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_bp.png')
+    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo2.png')
+    #fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_bp.png')
     
 def graph3(mes):
 
@@ -148,22 +150,23 @@ def graph3(mes):
     ax.boxplot(angle_table.loc[angle_table['distance']==10]['angle'], positions=[7], showfliers=True)
     ax.boxplot(angle_table.loc[angle_table['distance']==15]['angle'], positions=[8], showfliers=True)
     ax.boxplot(angle_table.loc[angle_table['distance']==20]['angle'], positions=[9], showfliers=True)
-    plt.xticks([1, 2,3,4,5,6,7,8,9], ['1 mètre','2 mètres','3 mètres','4 mètres','5 mètres','8 mètres','10 mètres','15 mètres','20 mètres'])
+    plt.xticks([1, 2,3,4,5,6,7,8,9], ['1','2','3','4','5','8','10','15','20'])
     
     plt.grid(True, linestyle='-', linewidth=2)
     plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
     plt.xlabel('Position réelle',fontsize=25)
-    plt.ylabel('Position mesurée',fontsize=25)
+    plt.ylabel('Position mesurée (en mètres)',fontsize=25)
     
     fig.tight_layout()
-    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_distance.png')
+    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo3.png')
+    #fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_distance.png')
 
 def main():
     #myList1,myList2=readData()
-    myList=readData()
-    print(myList)
-    #graph1(myList1)
-    #graph2(myList1)
+    myList1=readData()
+    #print(myList)
+    graph1(myList1)
+    graph2(myList1)
     #graph3(myList2)
     #print(myList1.angle)
     print('Done')
