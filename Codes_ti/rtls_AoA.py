@@ -30,7 +30,7 @@ args = parser.parse_args()
 #device connected to PC. The first parameter is the user/UART COM port, and 
 #the second is the baudrate which defaults to 115200
 
-my_nodes = [RTLSNode('/dev/ttyACM4', 115200), RTLSNode('/dev/ttyACM0', 115200)]
+my_nodes = [RTLSNode('/dev/ttyACM0', 115200), RTLSNode('/dev/ttyACM2', 115200)]
 
 #Instantiate the RTLSManager will the newly created nodes, 
 #but do not connect a rtls_agent_cli.
@@ -87,7 +87,7 @@ try:
             timestamp = time.time()
             try:
                 #with open("/home/efisio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples/data.json","a") as fichier:
-                with open("/home/vinicio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples/data.json","a") as fichier:
+                with open("/home/efisio/Documents/3Sem/S5_2019/Data/data3.json","a") as fichier:
                     message=json.loads("["+msg.as_json()+"]")
                     message[0]["payload"]["time"]=timestamp
                     message[0]["payload"]["distance"]=args.distance
