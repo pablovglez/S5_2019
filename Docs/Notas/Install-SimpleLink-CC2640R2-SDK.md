@@ -50,6 +50,8 @@ virtualenv -p python3 .venv
 
 cd /home/efisio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent
 
+cd /home/vinicio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent
+
 chmod +x rtls_agent_cli
 
 pip3 install -r requirements.txt
@@ -59,5 +61,7 @@ python3 agent/rtls_agent_cli.py
 ### TO RUN THE AOA CLIENT ###
 
 cd /home/efisio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples
+
+cd /home/vinicio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples
 
 python3 tst_efisio.py
