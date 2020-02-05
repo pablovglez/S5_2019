@@ -87,8 +87,8 @@ try:
             timestamp = time.time()
             try:
                 #with open("/home/efisio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples/data.json","a") as fichier:
-                with open("/home/vinicio/Documents/S5/S5_2019/Data/data5.json","a") as fichier:
-                #with open("/home/efisio/Documents/3Sem/S5_2019/Data/data3.json","a") as fichier:
+                #with open("/home/vinicio/Documents/S5/S5_2019/Data/data7.json","a") as fichier:
+                with open("/home/efisio/Documents/3Sem/S5_2019/Data/data8.json","a") as fichier:
                     message=json.loads("["+msg.as_json()+"]")
                     message[0]["payload"]["time"]=timestamp
                     message[0]["payload"]["distance"]=args.distance

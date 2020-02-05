@@ -16,13 +16,17 @@ class AOAData():
     antenna=[]
     channel=[]
 
+def myFunc(e):
+  return e   
+
 def readData():
     mes= AOAData()
     mes1= AOAData()
     mes2= AOAData()
+    
     try:
         #with open('/home/efisio/Documents/3Sem/S5_2019/Data/data.json') as f:
-        with open('/home/efisio/Documents/3Sem/S5_2019/Data/dataBLE2.json') as f:
+        with open('/home/efisio/Documents/3Sem/S5_2019/Data/dataBLE5.json') as f:
             mes.distance=[]  
             mes1.distance=[]  
             mes1.position=[]
@@ -78,10 +82,11 @@ def readData():
                     mes2.antenna.append(mes.antenna[i])
                     mes2.channel.append(mes.channel[i])
 
+            #mes1.sort(key=lambda x: x.position, reverse=True)
             #pass
             #return mes1,mes2
-            #print(mes.position)    
-            #print(mes.__dict__)  
+            #print(mes.angle)    
+            #print(mes2.__dict__)  
             #return mes
                 
     except (Exception, psycopg2.Error) as error :
@@ -90,16 +95,21 @@ def readData():
     return mes1,mes2
 
 def graph1(mes):
-
+    print(type(mes.__dict__))
+    angle_table=pd.DataFrame({'position' : mes.position,'distance' : mes.distance,'angle' : mes.angle})
+    
+    #sorted(mes.__dict__,key=lambda x: x.position)
     fig = plt.figure(figsize=(20,10))
     ax = plt.subplot(111)
-    print (len(mes.distance))
+    #print (len(mes.distance))
     print (len(mes.position))
-    print (len(mes.angle))
+    #print (len(mes.angle))
         
     #PLOT ANGLE VS READ POSITION
        
-    ax.plot(mes.position, mes.angle,'r+',lw=10, markersize=10)
+    #ax.plot(mes.position, mes.angle,'r+',lw=10, markersize=10)
+    #angle_table.plot()
+    ax.plot(angle_table['position'], angle_table['angle'],'r+',lw=10, markersize=10)
 
     plt.grid(True, linestyle='-', linewidth=2)
     plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
@@ -107,7 +117,7 @@ def graph1(mes):
     plt.ylabel('Position mesurée',fontsize=25)
     
     fig.tight_layout()
-    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo.png')
+    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo7.png')
 
 def graph2(mes):
 
@@ -144,7 +154,7 @@ def graph2(mes):
     plt.ylabel('Position mesurée',fontsize=25)
     
     fig.tight_layout()
-    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo2.png')
+    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo8.png')
     #fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_bp.png')
     
 def graph3(mes):
@@ -213,9 +223,9 @@ def graph3(mes):
 def main():
     myList1,myList2=readData()
     #myList1=readData()
-    #graph1(myList1)
-    #graph2(myList1)
-    graph3(myList2)
+    graph1(myList2) #Use myList2 for dataBLE5 measures
+    graph2(myList2) #Use myList2 for dataBLE5 measures
+    #graph3(myList2)
     #print(myList1.angle)
     print('Done')
     
