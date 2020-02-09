@@ -26,7 +26,7 @@ def readData():
     
     try:
         #with open('/home/efisio/Documents/3Sem/S5_2019/Data/data.json') as f:
-        with open('/home/efisio/Documents/3Sem/S5_2019/Data/dataBLE5.json') as f:
+        with open('/home/efisio/Documents/3Sem/S5_2019/Data/dataBLE3.json') as f:
             mes.distance=[]  
             mes1.distance=[]  
             mes1.position=[]
@@ -95,29 +95,31 @@ def readData():
     return mes1,mes2
 
 def graph1(mes):
-    print(type(mes.__dict__))
-    angle_table=pd.DataFrame({'position' : mes.position,'distance' : mes.distance,'angle' : mes.angle})
-    
+    positions = [ int(x) for x in mes.position ]
+    angle_table=pd.DataFrame({'position' : positions,'distance' : mes.distance,'angle' : mes.angle}).sort_values(by=['position'],ascending=True)
+        
     #sorted(mes.__dict__,key=lambda x: x.position)
     fig = plt.figure(figsize=(20,10))
     ax = plt.subplot(111)
     #print (len(mes.distance))
-    print (len(mes.position))
+    #print (len(mes.position))
     #print (len(mes.angle))
         
     #PLOT ANGLE VS READ POSITION
        
-    #ax.plot(mes.position, mes.angle,'r+',lw=10, markersize=10)
-    #angle_table.plot()
-    ax.plot(angle_table['position'], angle_table['angle'],'r+',lw=10, markersize=10)
-
-    plt.grid(True, linestyle='-', linewidth=2)
+    #ax.plot(mes.position, mes.angle,'r+',lw=10, markersize=10) 
+    plt.xticks([-90,-75,-60,-45,-30,-15,0,15,30,45,60,75,90])
     plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
     plt.xlabel('Position réelle',fontsize=25)
     plt.ylabel('Position mesurée',fontsize=25)
+    angle_table.plot()
+    ax.plot(angle_table['position'], angle_table['angle'],'r+',lw=10, markersize=10)
+
+    ax.grid(True, linestyle='-', linewidth=2)
+   
     
     fig.tight_layout()
-    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo7.png')
+    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_pt.png')
 
 def graph2(mes):
 
@@ -151,10 +153,10 @@ def graph2(mes):
     plt.grid(True, linestyle='-', linewidth=2)
     plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
     plt.xlabel('Position réelle (en degrés)',fontsize=25)
-    plt.ylabel('Position mesurée',fontsize=25)
+    plt.ylabel('Position mesurée (en degrés)',fontsize=25)
     
     fig.tight_layout()
-    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo8.png')
+    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_bp.png')
     #fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_bp.png')
     
 def graph3(mes):
@@ -176,7 +178,7 @@ def graph3(mes):
             dist2.append(mes.distance[i])
             angle2.append(mes.angle[i])
     angle_table1=pd.DataFrame({'position' : -30,'distance' : dist1,'angle' : angle1})
-    angle_table2=pd.DataFrame({'position' : -30,'distance' : dist2,'angle' : angle2})            
+    angle_table2=pd.DataFrame({'position' : 0,'distance' : dist2,'angle' : angle2})            
     #print(angle_table)
     #PLOT POSITION VS READ ANGLE 
        
@@ -184,20 +186,20 @@ def graph3(mes):
     ax.boxplot(angle_table1.loc[angle_table1['distance']=='10']['angle'], positions=[2], showfliers=True)
     ax.boxplot(angle_table1.loc[angle_table1['distance']=='15']['angle'], positions=[3], showfliers=True)
     ax.boxplot(angle_table1.loc[angle_table1['distance']=='16']['angle'], positions=[4], showfliers=True)
-    ax.boxplot(angle_table1.loc[angle_table1['distance']=='17']['angle'], positions=[5], showfliers=True)
-    ax.boxplot(angle_table1.loc[angle_table1['distance']=='18']['angle'], positions=[6], showfliers=True)
-    ax.boxplot(angle_table1.loc[angle_table1['distance']=='19']['angle'], positions=[7], showfliers=True)
-    ax.boxplot(angle_table1.loc[angle_table1['distance']=='20']['angle'], positions=[8], showfliers=True)
+    #ax.boxplot(angle_table1.loc[angle_table1['distance']=='17']['angle'], positions=[5], showfliers=True)
+    ax.boxplot(angle_table1.loc[angle_table1['distance']=='18']['angle'], positions=[5], showfliers=True)
+    ax.boxplot(angle_table1.loc[angle_table1['distance']=='19']['angle'], positions=[6], showfliers=True)
+    ax.boxplot(angle_table1.loc[angle_table1['distance']=='20']['angle'], positions=[7], showfliers=True)
 
-    plt.xticks([1, 2,3,4,5,6,7,8], ['5','10','15','16','17','18','19','20'])
+    plt.xticks([1, 2,3,4,5,6,7], ['5','10','15','16','18','19','20'])
     
     plt.grid(True, linestyle='-', linewidth=2)
-    plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
+    plt.title('Position mesurée vs distance (à -30 degrées)',loc='right',fontsize=25)
     plt.xlabel('Distance (en mètres)',fontsize=25)
     plt.ylabel('Position mesurée (en degrés)',fontsize=25)
     
     fig.tight_layout()
-    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo3.png')
+    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_distance_30d.png')
     
     fig2 = plt.figure(figsize=(20,10))
     bx = plt.subplot(111)
@@ -207,25 +209,53 @@ def graph3(mes):
     bx.boxplot(angle_table2.loc[angle_table2['distance']=='15']['angle'], positions=[3], showfliers=True)
     bx.boxplot(angle_table2.loc[angle_table2['distance']=='17']['angle'], positions=[4], showfliers=True)
     bx.boxplot(angle_table2.loc[angle_table2['distance']=='19']['angle'], positions=[5], showfliers=True)
-    bx.boxplot(angle_table2.loc[angle_table2['distance']=='20']['angle'], positions=[6], showfliers=True)
 
-    plt.xticks([1, 2,3,4,5,6], ['5','10','15','17','19','20'])
+    plt.xticks([1, 2,3,4,5], ['5','10','15','17','19'])
     
     plt.grid(True, linestyle='-', linewidth=2)
-    plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
+    plt.title('Position mesurée vs distance (à 0 degrées)',loc='right',fontsize=25)
     plt.xlabel('Distance (en mètres)',fontsize=25)
     plt.ylabel('Position mesurée (en degrés)',fontsize=25)
     
     fig2.tight_layout()
-    fig2.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/foo4.png')
+    fig2.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_distance_0d.png')
     #fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_distance.png')
+    
+def graph4(mes):
+    mes.time=mes.time[0:923]
+    print ("Len of time")
+    print (len(mes.time))
+    print ("Len of angle")
+    print (len(mes.angle))
+    times= [ float(x) for x in mes.time ]
+    print ("Len of times")
+    print (len(times))
+    print ((times[2]))
+    #print ((times[925]))
+    angle_table=pd.DataFrame({'time' : times,'distance' : mes.distance,'angle' : mes.angle}).sort_values(by=['time'],ascending=True)
+    
+    fig = plt.figure(figsize=(20,10))
+    ax = plt.subplot(111)
+    plt.xticks([-90,-75,-60,-45,-30,-15,0,15,30,45,60,75,90])
+    plt.title('Position mesurée vs temps',loc='right',fontsize=25)
+    plt.xlabel('Temps relatif',fontsize=25)
+    plt.ylabel('Position mesurée (en degrées)',fontsize=25)
+    angle_table.plot()
+    ax.plot(angle_table['time'], angle_table['angle'],'r+',lw=10, markersize=10)
+
+    ax.grid(True, linestyle='-', linewidth=2)
+   
+    
+    fig.tight_layout()
+    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_temps_pt.png')
 
 def main():
     myList1,myList2=readData()
     #myList1=readData()
-    graph1(myList2) #Use myList2 for dataBLE5 measures
-    graph2(myList2) #Use myList2 for dataBLE5 measures
+    #graph1(myList1) #Use myList2 for dataBLE5 measures
+    #graph2(myList1) #Use myList2 for dataBLE5 measures
     #graph3(myList2)
+    graph4(myList1) #Use myList2 for dataBLE5 measures
     #print(myList1.angle)
     print('Done')
     
