@@ -1,4 +1,4 @@
-########## THIS TUTORIAL EXPLAINS HOW TO INSTALL SIMPLELINK-CC2640R2-SDK/3.20.00.21 ON UBUNTU 18.04 AND ABOVE ##########
+### ########## THIS TUTORIAL EXPLAINS HOW TO INSTALL SIMPLELINK-CC2640R2-SDK/3.20.00.21 ON UBUNTU 18.04 AND ABOVE ########## ###
 
 * Go to <http://www.ti.com/tool/download/SIMPLELINK-CC2640R2-SDK/3.20.00.21>
 * Download Linux Installer
@@ -36,7 +36,7 @@
   - python3 agent/rtls_agent_cli.py
 
 
-########## TO RUN AGAIN THE VIRTUAL ENVIRONMENT ##########
+### ########## TO RUN AGAIN THE VIRTUAL ENVIRONMENT ########## ###
 ### FOR THE FOLLOWING USES ###
 
 * Execute virtualenv typing
@@ -55,13 +55,15 @@
 * Run typing
   - python3 agent/rtls_agent_cli.py
 
+
+
 ### TO RUN THE AOA CLIENT ###
 
 * Go to /ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent directory 
  - /home/efisio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples
  - /home/vinicio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples
 
-########## TO INSTALL SDK 3.40.00.10 ##########
+### ########## TO INSTALL SDK 3.40.00.10 ########## ###
 ### ATTENTION : Installing SDK 3.40 will make impossible to use the code rtls_AoA developped for SDK 3.20 ###
 
 * Go to <http://www.ti.com/tool/download/SIMPLELINK-CC2640R2-SDK/3.40.00.10>
