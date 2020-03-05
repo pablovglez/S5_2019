@@ -15,6 +15,9 @@
 
 * Give permissions to file typing in terminal 
   - chmod +x requirements.txt
+  
+* Install the requirements in the *.txt file
+  - pip3 install -r requirements.txt
    - If error with windows-curses [windows-curses is not necessary on Python 3.7] comment such line
 
 * Install virtualenv typing 
