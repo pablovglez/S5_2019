@@ -42,7 +42,7 @@ python3 agent/rtls_agent_cli.py
 
 ### FOR THE FOLLOWING USES, START FROM  LINE 17 ###
 
-virtualenv -p python3 .venv 
+virtualenv -p python3 .venv
 #or python3 -m venv .venv
 
 . .venv/bin/activate 
@@ -65,3 +65,41 @@ cd /home/efisio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/
 cd /home/vinicio/ti/simplelink_cc2640r2_sdk_3_20_00_21/tools/blestack/rtls_agent/examples
 
 python3 tst_efisio.py
+
+
+####
+###### TO INSTALL SDK 3.40.00.10
+####
+
+#Go to http://www.ti.com/tool/download/SIMPLELINK-CC2640R2-SDK/3.40.00.10
+
+# Go to download folder in terminal and type:
+
+#Give permissions to file typing in terminal 
+chmod +x simplelink_cc2640r2_sdk_3_40_00_10.run
+
+#Type in terminal 
+./simplelink_cc2640r2_sdk_3_40_00_10.run
+
+# Installing Python3.7
+#Setup external packages in case you network is behind a proxy use [--proxy]
+
+#Go to <rtls_agent folder>
+cd ti/simplelink_cc2640r2_sdk_3_40_00_10/tools/blestack/rtls_agent
+
+#Give permissions to file typing in terminal 
+chmod +x package.sh
+
+#Package has been created as a script for Windows env and then ported over to run on a Unix environment so we need to type:
+
+sed -i -e 's/\r$//' package.sh 
+
+#Run de package file
+histoy./package.sh -c -b -u -i 
+
+#Go to <rtls_ui folder>
+
+cd ti/simplelink_cc2640r2_sdk_3_40_00_10/tools/blestack/rtls_agent/rtls_ui
+
+chmod +x rtls_ui
+./rtls_ui
