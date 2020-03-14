@@ -27,7 +27,7 @@ Double click on the *.ccxml file <app project/targetConfigs/CC2640R2F.ccxm>
 
 Go to project properties (Right click) 
  * <app project/CCS Build/ARM Compiler/Predefined Symbols>
- * Clic add and type <RTLS_LOCATIONING_AOA>
+ * Click add and type <RTLS_LOCATIONING_AOA>
  * Apply and close
  * Save and flash
 
