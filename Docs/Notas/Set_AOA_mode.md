@@ -1,6 +1,6 @@
-### ##########   TO ACTIVATE AOA ########## ###
+# TO ACTIVATE AOA
 
-# Reminder
+### Reminder ###
  * For the case of our cards :
  * Passive <L5000IZO>
  * Master  <L5000J02>
