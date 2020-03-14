@@ -26,7 +26,7 @@ def readData():
     
     try:
         #with open('/home/efisio/Documents/3Sem/S5_2019/Data/data.json') as f:
-        with open('/home/efisio/Documents/3Sem/S5_2019/Data/dataBLE11.json') as f:
+        with open('/home/efisio/Documents/3Sem/S5_2019/Data/dataBLE9.json') as f:
             mes.distance=[]  
             mes1.distance=[]  
             mes1.position=[]
@@ -101,8 +101,8 @@ def graph1(mes):
     #sorted(mes.__dict__,key=lambda x: x.position)
     fig = plt.figure(figsize=(20,10))
     ax = plt.subplot(111)
-    #print (len(mes.distance))
-    print (len(mes.position))
+    print (len(mes.distance))
+    #print (len(mes.position))
     #print (len(mes.angle))
         
     #PLOT ANGLE VS READ POSITION
@@ -130,28 +130,32 @@ def graph2(mes):
         
     #PLOT ANGLE VS READ DISTANCE 
        
-    ax.boxplot(angle_table.loc[angle_table['position']=='-90']['angle'], positions=[1], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='-75']['angle'], positions=[2], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='-60']['angle'], positions=[3], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='-45']['angle'], positions=[4], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='-30']['angle'], positions=[5], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='-15']['angle'], positions=[6], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='0']['angle'], positions=[7], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='15']['angle'], positions=[8], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='30']['angle'], positions=[9], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='45']['angle'], positions=[10], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='60']['angle'], positions=[11], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='75']['angle'], positions=[12], showfliers=True)
-    ax.boxplot(angle_table.loc[angle_table['position']=='90']['angle'], positions=[13], showfliers=True)
+    ax.boxplot(angle_table.loc[angle_table['position']=='-90']['angle'], positions=[1], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='-75']['angle'], positions=[2], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='-60']['angle'], positions=[3], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='-45']['angle'], positions=[4], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='-30']['angle'], positions=[5], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='-15']['angle'], positions=[6], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='0']['angle'], positions=[7], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='15']['angle'], positions=[8], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='30']['angle'], positions=[9], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='45']['angle'], positions=[10], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='60']['angle'], positions=[11], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='75']['angle'], positions=[12], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
+    ax.boxplot(angle_table.loc[angle_table['position']=='90']['angle'], positions=[13], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
     
+    ax.tick_params(direction='out', length=6, width=2, grid_alpha=0.5)
     plt.xticks([1,2,3,4,5,6,7,8,9,10,11,12,13], ['-90','-75','-60','-45','-30','-15','0','15','30','45','60','75','90'])
     plt.yticks([-90,-75,-60,-45,-30,-15,0,15,30,45,60,75,90])
+    #plt.xticks([4,5,6,7,8,9,10], ['-45','-30','-15','0','15','30','45'])
+    #plt.yticks([-45,-30,-15,0,15,30,45,60,75,90,105])
     #plt.yticks(np.arange(-100, 100, step=10))
+    #plt.yticks('ytick', labelsize=50)
     
     plt.grid(True, linestyle='-', linewidth=2)
-    plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
-    plt.xlabel('Position réelle (en degrés)',fontsize=25)
-    plt.ylabel('Position mesurée',fontsize=25)
+    #plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
+    #plt.xlabel('Position réelle (en degrés)',fontsize=25)
+    #plt.ylabel('Position mesurée',fontsize=25)
     
     fig.tight_layout()
     fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_bp.png')
@@ -241,14 +245,56 @@ def graph4(mes,path):
        
     fig.tight_layout()
     fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_temps_pt_'+path+'.png')
+    
+def get_sem(mes,test):
+    fig = plt.figure(figsize=(20,10))
+    cx = plt.subplot(111)
+    print (len(mes.distance))
+    print (len(mes.position))
+    print (len(mes.angle))
+    angle_table=pd.DataFrame({'position' : mes.position,'distance' : mes.distance,'angle' : mes.angle})
+    errors=[]
+
+    for i in range(0,14):
+        #errors.extend([1])
+        errors.extend([angle_table.loc[angle_table['position']==str(-90+(15*(i)))]['angle'].sem(axis=0)]) #Calculate de variance of the observed angle
+ 
+    cx.errorbar(angle_table.loc[angle_table['position']=='-90']['position'], angle_table.loc[angle_table['position']=='-90']['angle'], errors[1],linewidth=4.0,color='orange',barsabove=True)
+    cx.errorbar(angle_table.loc[angle_table['position']=='-75']['position'], angle_table.loc[angle_table['position']=='-75']['angle'], errors[2],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='-60']['position'], angle_table.loc[angle_table['position']=='-60']['angle'], errors[3],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='-45']['position'], angle_table.loc[angle_table['position']=='-45']['angle'], errors[4],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='-30']['position'], angle_table.loc[angle_table['position']=='-30']['angle'], errors[5],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='-15']['position'], angle_table.loc[angle_table['position']=='-15']['angle'], errors[6],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='0']['position'], angle_table.loc[angle_table['position']=='0']['angle'], errors[7],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='15']['position'], angle_table.loc[angle_table['position']=='15']['angle'], errors[8],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='30']['position'], angle_table.loc[angle_table['position']=='30']['angle'], errors[9],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='45']['position'], angle_table.loc[angle_table['position']=='45']['angle'], errors[10],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='60']['position'], angle_table.loc[angle_table['position']=='60']['angle'], errors[11],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='75']['position'], angle_table.loc[angle_table['position']=='75']['angle'], errors[12],linewidth=4.0,color='orange')
+    cx.errorbar(angle_table.loc[angle_table['position']=='90']['position'], angle_table.loc[angle_table['position']=='90']['angle'], errors[13],linewidth=4.0,color='orange')
+    
+    cx.tick_params(direction='out', length=6, width=2, grid_alpha=0.5)
+    plt.xticks([0,1,2,3,4,5,6,7,8,9,10,11,12,13], ['-90','-75','-60','-45','-30','-15','0','15','30','45','60','75','90'])
+    plt.yticks([-90,-75,-60,-45,-30,-15,0,15,30,45,60,75,90])
+    
+    plt.grid(True, linestyle='-', linewidth=2)
+    
+    fig.tight_layout()
+    fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/errors_test_'+test+'.png')
+    print ("|  Position\t  |\t Error     |")
+    print ("____________________________________")
+    for i in range(0,13):
+        print (str(-90+(15*(i)))+"\t"+"%.5f"% errors[i])
+        #print ("|"+str(-90+(15*(i)))+"\t\t  |\t "+"%.5f"% errors[i]+ "   |" )
 
 def main():
     myList1,myList2=readData()
     #myList1=readData()
     #graph1(myList1) #Use myList2 for dataBLE5 measures
     #graph2(myList1) #Use myList2 for dataBLE5 measures
+    get_sem(myList1,'9') #Use myList2 for dataBLE5 measures
     #graph3(myList2)
-    graph4(myList1,'4') #Use myList2 for dataBLE5 measures
+    #graph4(myList1,'4') #Use myList2 for dataBLE5 measures
     #print(myList1.angle)
     print('Done')
     
