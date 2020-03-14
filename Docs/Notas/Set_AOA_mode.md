@@ -6,7 +6,7 @@
  * Master  <L5000J02>
  * Slave   <L5000IZP>
 
-# This is a tutorial to activate AOA in Code Composer Studio using LAUNCH CC2640R2 cards
+### This is a tutorial to activate AOA in Code Composer Studio using LAUNCH CC2640R2 cards ###
 
 In the master and slave : right click on the *_app project and then in properties
  * In <Build/XDCtools> Make sure the XDC TOOL is 3.20.0.21 
@@ -31,9 +31,9 @@ Go to project properties (Right click)
  * Apply and close
  * Save and flash
 
-# AOA Format (RTLS)
+### AOA Format (RTLS) ###
  * {"originator": "Nwp", "type": "AsyncReq", "subsystem": "RTLS", "command": "RTLS_CMD_AOA_RESULT_ANGLE", "payload": {"angle": -59, "rssi": -47, "antenna": 2, "channel": 22}}
 
-# AOA Format (our codes)
+### AOA Format (our codes) ###
 
  * "payload": {"angle": -19, "rssi": -66, "antenna": 2, "channel": 26, "time": 1581951429.8088975, "distance": "4", "position": "-15"}
