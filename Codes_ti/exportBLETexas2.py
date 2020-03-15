@@ -1,7 +1,6 @@
 import json
 import psycopg2
 import logging #Provides a logging system
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -15,9 +14,6 @@ class AOAData():
     rssi=[]
     antenna=[]
     channel=[]
-
-def myFunc(e):
-  return e   
 
 def readData():
     mes= AOAData()
@@ -34,24 +30,11 @@ def readData():
             mes2.distance=[]
             mes2.position=[]
             mes2.angle=[]
+            
+            #READ THE RAW DATA 
+
             for entry in f:                
                 dict = json.loads(entry)
-                #if dict['class']=='SKY':
-                #mes.position=30
-                """mes.position=dict.get('position', 0)
-                #mes.distance=20
-                mes.distance=dict.get('distance', 0)
-                mes.time=dict.get('time', 0)
-                mes.angle=dict.get('angle', 0)
-                mes.rssi=dict.get('rssi', 0)
-                mes.antenna=dict.get('antenna', 0)
-                mes.channel=dict.get('channel', 0)"""
-                """with open('/home/efisio/Documents/3Sem/S5_2019/Data/dataBLE.json',"a") as fichier2:
-                    #print(type(mes.__dict__))
-                    json.dump(mes.__dict__, fichier2)
-                    fichier2.write('\n')
-                    fichier2.close"""
-                                #print(test)
                 mes.position.append(dict.get('position', 0))
                 mes.distance.append(dict.get('distance', 0))
                 mes.time.append(dict.get('time', 0))
@@ -61,6 +44,8 @@ def readData():
                 mes.channel.append(dict.get('channel', 0))
                 #myList.append(mes.__dict__)
                 
+            #SEPARATE THE RANGE TESTS (BELOW 5 METERS) FROM THE REGULAR TESTS
+            
             for i, line in enumerate(mes.distance):
                 if int(line )< 5:
                                         
@@ -82,33 +67,19 @@ def readData():
                     mes2.antenna.append(mes.antenna[i])
                     mes2.channel.append(mes.channel[i])
 
-            #mes1.sort(key=lambda x: x.position, reverse=True)
-            #pass
-            #return mes1,mes2
-            #print(mes.angle)    
-            #print(mes2.__dict__)  
-            #return mes
-                
     except (Exception, psycopg2.Error) as error :
             logging.debug('Error while reading file or inserting to PostgreSQL:'.format(error))
             print ("Error while reading file or inserting to PostgreSQL", error)
     return mes1,mes2
 
-def graph1(mes):
-    print(type(mes.__dict__))
+def pointed_graph(mes):
     angle_table=pd.DataFrame({'position' : mes.position,'distance' : mes.distance,'angle' : mes.angle})
     
-    #sorted(mes.__dict__,key=lambda x: x.position)
     fig = plt.figure(figsize=(20,10))
     ax = plt.subplot(111)
-    print (len(mes.distance))
-    #print (len(mes.position))
-    #print (len(mes.angle))
-        
+    
     #PLOT ANGLE VS READ POSITION
        
-    #ax.plot(mes.position, mes.angle,'r+',lw=10, markersize=10)
-    #angle_table.plot()
     ax.plot(angle_table['position'], angle_table['angle'],'r+',lw=10, markersize=10)
 
     plt.grid(True, linestyle='-', linewidth=2)
@@ -119,7 +90,7 @@ def graph1(mes):
     fig.tight_layout()
     fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_pt.png')
 
-def graph2(mes):
+def boxplot_graphs(mes):
 
     fig = plt.figure(figsize=(20,10))
     ax = plt.subplot(111)
@@ -127,8 +98,6 @@ def graph2(mes):
     print (len(mes.position))
     print (len(mes.angle))
     angle_table=pd.DataFrame({'position' : mes.position,'distance' : mes.distance,'angle' : mes.angle})
-        
-    #PLOT ANGLE VS READ DISTANCE 
        
     ax.boxplot(angle_table.loc[angle_table['position']=='-90']['angle'], positions=[1], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
     ax.boxplot(angle_table.loc[angle_table['position']=='-75']['angle'], positions=[2], showfliers=True,boxprops= dict(linewidth=2.0, color='black'), whiskerprops=dict(linestyle='-',linewidth=2.0, color='black'), medianprops=dict(linestyle='-',linewidth=2.0, color='r'))
@@ -147,10 +116,6 @@ def graph2(mes):
     ax.tick_params(direction='out', length=6, width=2, grid_alpha=0.5)
     plt.xticks([1,2,3,4,5,6,7,8,9,10,11,12,13], ['-90','-75','-60','-45','-30','-15','0','15','30','45','60','75','90'])
     plt.yticks([-90,-75,-60,-45,-30,-15,0,15,30,45,60,75,90])
-    #plt.xticks([4,5,6,7,8,9,10], ['-45','-30','-15','0','15','30','45'])
-    #plt.yticks([-45,-30,-15,0,15,30,45,60,75,90,105])
-    #plt.yticks(np.arange(-100, 100, step=10))
-    #plt.yticks('ytick', labelsize=50)
     
     plt.grid(True, linestyle='-', linewidth=2)
     #plt.title('Position réelle vs position mesurée',loc='right',fontsize=25)
@@ -159,15 +124,12 @@ def graph2(mes):
     
     fig.tight_layout()
     fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_bp.png')
-    #fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/position_vs_mesure_bp.png')
     
-def graph3(mes):
-    print(len(mes.position))
+def range_graph(mes):
     dist1=[]
     angle1=[]
     dist2=[]
     angle2=[]
-    print(len(mes.distance[222]))
     fig = plt.figure(figsize=(20,10))
     ax = plt.subplot(111)
     
@@ -175,14 +137,11 @@ def graph3(mes):
         if line == '-30':
             dist1.append(mes.distance[i])
             angle1.append(mes.angle[i])
-            #print(mes.distance[line])
         if line == '0':
             dist2.append(mes.distance[i])
             angle2.append(mes.angle[i])
     angle_table1=pd.DataFrame({'position' : -30,'distance' : dist1,'angle' : angle1})
     angle_table2=pd.DataFrame({'position' : 0,'distance' : dist2,'angle' : angle2})            
-    #print(angle_table)
-    #PLOT POSITION VS READ ANGLE 
        
     ax.boxplot(angle_table1.loc[angle_table1['distance']=='5']['angle'], positions=[1], showfliers=True)
     ax.boxplot(angle_table1.loc[angle_table1['distance']=='10']['angle'], positions=[2], showfliers=True)
@@ -221,19 +180,15 @@ def graph3(mes):
     
     fig2.tight_layout()
     fig2.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_distance_0d.png')
-    #fig.savefig('//home/efisio/Documents/3Sem/S5_2019/Data/mesure_vs_distance.png')
-    
-def graph4(mes,path):
+        
+def path_graph(mes,path):
     mes.time=mes.time[0:len(mes.angle)]
     times=[ float(x)-float(mes.time[1]) for x in mes.time ] #used to normalize the time vector
     
     
     angle_table=pd.DataFrame({'time' : times,'distance' : mes.distance,'angle' : mes.angle}).sort_values(by=['time'],ascending=True)
     angle_table=pd.DataFrame({'time' : angle_table.loc[angle_table['distance']==path]['time']-angle_table.loc[angle_table['distance']==path]['time'].iloc[1],'distance' : angle_table.loc[angle_table['distance']==path]['distance'],'angle' : angle_table.loc[angle_table['distance']==path]['angle']}).sort_values(by=['time'],ascending=True)
-    #angle_table.loc[angle_table['distance']==path]['time'].iloc[-1]
-    #print(angle_table['time'].iloc[-1])
-    #angle_table['time']=[x-angle_table['time'].iloc[-1] for x in angle_table['time']]
-    
+        
     fig = plt.figure(figsize=(20,10))
     ax = plt.subplot(111)
     plt.title('Position mesurée vs temps',loc='right',fontsize=25)
@@ -256,7 +211,6 @@ def get_sem(mes,test):
     errors=[]
 
     for i in range(0,14):
-        #errors.extend([1])
         errors.extend([angle_table.loc[angle_table['position']==str(-90+(15*(i)))]['angle'].sem(axis=0)]) #Calculate de variance of the observed angle
  
     cx.errorbar(angle_table.loc[angle_table['position']=='-90']['position'], angle_table.loc[angle_table['position']=='-90']['angle'], errors[1],linewidth=4.0,color='orange',barsabove=True)
@@ -289,12 +243,10 @@ def get_sem(mes,test):
 
 def main():
     myList1,myList2=readData()
-    #myList1=readData()
-    #graph1(myList1) #Use myList2 for dataBLE5 measures
-    #graph2(myList1) #Use myList2 for dataBLE5 measures
+    #pointed_graph(myList1) #Use myList2 for dataBLE5 measures
+    #boxplot_graphs(myList1) #Use myList2 for dataBLE5 measures
     get_sem(myList1,'9') #Use myList2 for dataBLE5 measures
-    #graph3(myList2)
-    #graph4(myList1,'4') #Use myList2 for dataBLE5 measures
+    #range_graph(myList1,'4') #Use myList2 for dataBLE5 measures
     #print(myList1.angle)
     print('Done')
     

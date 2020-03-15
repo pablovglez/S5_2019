@@ -1,6 +1,6 @@
 ### Summary of the tests ### 
 
-  * DataBLE : Tests outdoor at INSA - Every 30 degrees up to 90 and every meter at +30 degrees
+  * DataBLE 1 : Tests outdoor at INSA - Every 30 degrees up to 90 and every meter at +30 degrees
 
   * DataBLE 2 : Tests outdoor at INSA - Every 15 degrees and every meter at +- 30 degrees
 
